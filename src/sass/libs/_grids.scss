@@ -1,0 +1,45 @@
+// Container
+.container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding: ($gutter) ($gutter*2);
+    
+    @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        padding: ($gutter*1) ($gutter*3);
+    }
+
+    @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {
+        padding: ($gutter*1.5) ($gutter*4);
+    }
+
+    @media all and (min-width: $breakpoint-xxl){
+        padding: ($gutter*2) ($gutter*6);
+    }
+
+}
+
+// Css grid
+.grid {
+    display: grid;
+    // grid-template-columns: 1fr repeat(6, 2fr) 1fr;  
+    // grid-template-columns: 1fr repeat(3, 2fr) 0.33fr repeat(3, 2fr) 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    //grid-row-gap: ($gutter*2);
+    //grid-column-gap: $gutter;
+
+    // @include breakpoint(md) {
+    //     grid-template-rows: repeat(3, 1fr);
+    //     grid-column-gap: ($gutter*4);
+    //     grid-row-gap: ($gutter*4);
+    // }
+
+    @media all and (max-width: $breakpoint-lg) {      
+        // grid-template-rows: repeat(8, 50vh);
+    }
+
+}
+
+
+
+

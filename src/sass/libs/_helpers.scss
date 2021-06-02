@@ -1,0 +1,37 @@
+@mixin border-radius_rectangle {
+    -moz-border-radius: $border-radius-normal;
+    -moz-border--radius: $border-radius-normal;
+    -webkit-border-radius: $border-radius-normal;
+    -webkit-border--radius: $border-radius-normal;
+    border-radius: $border-radius-normal;
+    border-radius: $border-radius-normal;
+}
+
+@mixin border-radius_rectangle_only-top {
+    -moz-border-top-left-radius: $border-radius-normal;
+    -moz-border-top-right-radius: $border-radius-normal;
+    -webkit-border-top-left-radius: $border-radius-normal;
+    -webkit-border-top-right-radius: $border-radius-normal;
+    border-top-left-radius: $border-radius-normal;
+    border-top-right-radius: $border-radius-normal;
+}
+
+
+@mixin border-radius_circle {
+    -moz-border-radius: $border-radius-circle;
+    -webkit-border-radius: $border-radius-circle;
+    border-radius: $border-radius-circle;
+}
+
+@mixin transition_quick {
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+@mixin transition_smooth {
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+

@@ -1,0 +1,137 @@
+$font-size-ratio-mobile:        0.88;
+$font-size-ratio:               1.25;
+$font-body-line-height:         1.5;
+$font-heading-line-height:      1.20;
+
+$font-size--3:                 calc(1em / #{$font-size-ratio} / #{$font-size-ratio} / #{$font-size-ratio});
+$font-size--2:                 calc(1em / #{$font-size-ratio} / #{$font-size-ratio});
+$font-size--1:                 calc(1em / #{$font-size-ratio});
+$font-size-0:                  calc(1em);
+$font-size-1:                  calc(1em * #{$font-size-ratio});
+$font-size-2:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-3:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-4:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-5:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-6:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-7:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-8:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-9:                  calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+$font-size-10:                 calc(1em * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio} * #{$font-size-ratio});
+
+
+@mixin font($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src: url($font-file+'.eot');
+      src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+            url($font-file+'.woff') format('woff'),
+            url($font-file+'.woff2') format('woff2'),
+            url($font-file+'.ttf') format('truetype');
+    }
+  }
+  
+// @include font('Montserrat-Light', '../fonts/Montserrat-Light');
+// @include font('Hikou-Regular', '../fonts/Hikou-Regular');
+// @include font('Hikou-Light', '../fonts/Hikou-Light');
+// @include font('Hikou-Outline', '../fonts/Hikou-Outline');
+
+
+// @font-face{
+//     font-family: Hikou-Outline;
+//     src: url('../fonts/Hikou-Outline.otf') format("opentype");
+// }
+
+
+
+
+@mixin h1 {
+    font-family: $font-primary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-7;   
+    text-transform: unset;
+    
+    font-weight:$font-weight-light;
+}
+
+h1,
+.h1 {
+    @include h1;
+}
+
+@mixin h2 {
+    font-family: $font-primary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-5;
+    text-transform: unset;
+    font-weight:$font-weight-light;
+}
+
+h2,
+.h2 {
+    @include h2;
+}
+
+@mixin h3 {
+    font-family:  $font-primary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-4;
+    font-weight:$font-weight-light;
+    color:$font-color-primary;
+}
+
+h3,
+.h3 {
+    @include h3;
+}
+
+@mixin h4 {
+    font-family: $font-secondary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-3;
+    font-weight:$font-weight-normal;
+    color:$font-color-secondary;
+}
+
+h4,
+.h4 {
+    @include h4;
+}
+
+@mixin h5 {
+    font-family: $font-secondary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-2;
+    font-weight:$font-weight-normal;
+    color:$font-color-secondary;
+}
+
+h5,
+.h5 {
+    @include h5;
+}
+
+@mixin h6 {
+    font-family: $font-secondary;
+    line-height: $font-heading-line-height;
+    font-size: $font-size-1;
+    font-weight:$font-weight-normal;
+    color:$font-color-primary;
+}
+
+h6,
+.h6 {
+    @include h6;
+}
+
+@mixin p {
+    font-family: $font-secondary;
+    font-size: $font-size-1;
+    line-height: $font-body-line-height;
+    text-transform: unset;
+    color: $font-color-primary;
+}
+
+body,
+.p {
+    @include p;
+}

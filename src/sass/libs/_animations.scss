@@ -1,0 +1,108 @@
+// Keyframe animaties
+
+@keyframes expandPartly {
+    0% {
+        width:0%;
+    }
+
+    100% {
+        width:20%;
+    }
+}
+
+@keyframes expandFull {
+    0% {
+        width:0%;
+    }
+
+    50% {
+        width:40%;
+    }
+
+    100% {
+        width:100%;
+    }
+} 
+
+// Vue transitions
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+    transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+    transition: all 0.3s ease;
+}
+.slide-fade-enter{
+    transform: translateX(100%);
+    nav{
+        a{
+            animation: swipe-in .3s;
+        }
+    }   
+}
+.slide-fade-leave-to{
+  transform: translateX(1000px);
+    nav{
+        a{
+            animation: swipe-out .3s;
+        }
+    }   
+}
+
+.cross-fade-enter-active {
+    transition: all .3s ease;
+}
+.cross-fade-leave-active {
+    transition: all .3s ease;
+}
+.cross-fade-enter, .cross-fade-leave-to{
+  button{
+    span{
+        &:before{
+            animation: move-down .3s;
+        }
+        &:after{
+            animation: move-up .3s;
+        }
+      }
+  }
+}
+
+@keyframes swipe-in {
+    from {
+        transform: translateX(100%);       
+      }
+      to {
+        transform: translateX(0px);
+      }
+  }
+
+
+@keyframes swipe-out {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(100%);
+    }
+  }
+
+  @keyframes move-down {
+    from {
+        top: 0;
+    }
+    to {
+        top: 20px;
+     }
+  }
+
+  @keyframes move-up {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 20px;
+     }
+  }

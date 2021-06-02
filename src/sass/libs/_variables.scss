@@ -1,0 +1,60 @@
+// Colors
+$bg-color-primary:                #ffffff; 
+$bg-color-secondary:              #E8E8E8;
+$bg-color-tertiary:               #C2C2C2;
+$bg-color-quaternary:             #F8F8F8;
+
+$highlight-color-primary:         #56B884;
+
+$gradient-color-primary:          #F8364E;
+$gradient-color-secondary:        #5697B8;
+$gradient-color-tertiary:         #353C7B;
+
+$gradient-color-primary-translucent:         rgba(#F8364E, .8);
+$gradient-color-secondary-translucent:        rgba(#5697B8, .8);
+$gradient-color-tertiary-translucent:         rgba(#353C7B, .8);
+$highlight-color-primary-translucent:         rgba(#56B884, .8);
+
+
+
+// Fonts
+$font-primary:                      'rijksoverheidsansheading-bold', sans-serif; 
+$font-secondary:                    'rijksoverheidsanstext-regular', sans-serif; 
+// $font-tertiary:                     'Hikou-Light', sans-serif; 
+// $font-quaternary:                   'Hikou-Outline', sans-serif; 
+$font-color-primary:              #001a27;
+$font-color-secondary:            #393939;
+$font-color-tertiary:             #ffffff;
+
+$font-lineheight:                   1.56rem;
+$font-lineheight-small:             1rem;
+$font-size:                         16px;
+$font-weight-light:                 300;
+$font-weight-normal:                400;
+$font-weight-medium:                600;
+$font-weight-bold:                  700;
+$font-weight-extrabold:             800;
+
+// Spacings
+$spacing-xs:                        8px;
+$spacing-sm:                        16px;
+$spacing-md:                        32px;
+$spacing-lg:                        48px;
+$spacing-xl:                        64px;
+$spacing-xxl:                       128px;
+
+// Media Queries
+$breakpoint-xs:                     480px;
+$breakpoint-sm:                     768px;
+$breakpoint-md:                     960px;
+$breakpoint-lg:                     1280px;
+$breakpoint-xl:                     1440px;
+$breakpoint-xxl:                    1780px;
+$breakpoint-xxxl:                   1920px;
+
+// Grid
+$gutter:                            $spacing-sm;
+
+// Elements
+$border-radius-normal:              15px;
+$border-radius-circle:               50%;
