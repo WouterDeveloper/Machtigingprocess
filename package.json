@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "dependencies": {
     "laravel-mix": "^5.0.7",
     "resolve-url-loader": "^3.1.0",
