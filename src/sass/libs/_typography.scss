@@ -29,20 +29,11 @@ $font-size-10:                 calc(1em * #{$font-size-ratio} * #{$font-size-rat
             url($font-file+'.ttf') format('truetype');
     }
   }
-  
-// @include font('Montserrat-Light', '../fonts/Montserrat-Light');
-// @include font('Hikou-Regular', '../fonts/Hikou-Regular');
-// @include font('Hikou-Light', '../fonts/Hikou-Light');
-// @include font('Hikou-Outline', '../fonts/Hikou-Outline');
 
-
-// @font-face{
-//     font-family: Hikou-Outline;
-//     src: url('../fonts/Hikou-Outline.otf') format("opentype");
-// }
-
-
-
+  @font-face{
+    font-family:'rijksoverheidsansheading-bold-bold';
+    src: url('../fonts/rijksoverheidsansheading-bold-bold.ttf') format('truetype');
+}
 
 @mixin h1 {
     font-family: $font-primary;

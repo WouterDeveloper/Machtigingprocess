@@ -11,17 +11,18 @@ let mix = require('laravel-mix');
  |
  */
  mix
- .js('src/js/main.js', 'dist/js'),
- .js('src/js/jquery-3.6.0.slim.min.js', 'dist/js'),
- .js('src/js/jspdf.es.min.js', 'dist/js'),
- .sass('src/sass/main.scss', 'dist/css')
- .options({
-     processCssUrls: false
- })
- .copy('src/img/', 'dist/img/', false) // Don't flatten!
- .copy('src/fonts/', 'dist/fonts/', false) // Don't flatten!
-//  .copy('src/pdf/', 'dist/pdf/', false) // Don't flatten!
- .setPublicPath('dist');
+    .js('src/js/jquery-3.6.0.slim.min.js', 'dist/js')
+    .js('src/js/jspdf.min.js', 'dist/js')
+    .js('src/js/pdf_img.js', 'dist/js')
+    .js('src/js/main.js', 'dist/js')
+    .sass('src/sass/main.scss', 'dist/css')
+    .options({
+        processCssUrls: false
+    })
+    .copy('src/img/', 'dist/img/', false) // Don't flatten!
+    .copy('src/fonts/', 'dist/fonts/', false) // Don't flatten!
+    //  .copy('src/pdf/', 'dist/pdf/', false) // Don't flatten!
+    .setPublicPath('dist');
 
 // Full API
 // mix.js(src, output);

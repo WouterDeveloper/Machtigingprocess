@@ -1,61 +1,43 @@
+import { imgData } from '../js/pdf_img'
 
-  window.onload = function() {
-    document.querySelectorAll('.skills__block .skills__header')
-    .forEach(function(el, i) {
-        el.className += ' header'+(i+1);
-    })
-
-    // document.querySelectorAll('.skills__techniques__row figure')
-    // .forEach(function(el, i) {
-    //     el.className += ' figure'+(i+1);
-    // })
-   var hamburger = document.querySelector(".hamburger");
-   var navigation = document.querySelector(".content nav ul");
-
-   hamburger.addEventListener("click", function() {
-     hamburger.classList.toggle("is-active");
-     navigation.classList.toggle("is-active");
-   });
-
-   let Buttons = document.querySelectorAll(".filter__button");
-
-  // loop through the buttons using for..of 
-  for (let button of Buttons) {
-    // listen for a click event 
-    button.addEventListener('click', (e) => {
-      // et = event target
-      const et = e.target;
-      // slect active class
-      const active = document.querySelector(".active");
-      // check for the button that has active class and remove it
-      if (active) {
-        active.classList.remove("active");
-      }
-      // add active class to the clicked element 
-      et.classList.add("active");
-      
-      // select all classes with the name content
-      let allContent = document.querySelectorAll('.projects__project');
-
-      // loop through all content classes
-      for (let content of allContent) {
-        // display the content if the class has the same data-attribute as the button 
-        if(content.getAttribute('data-name') === button.getAttribute('data-name')) {
-          content.style.display = "block";
+$( document ).ready(function() {
+    $('#button').click(function() {
+        if ($("#machtiging-soort").val()=="" || $("#machtiging-naam").val()=="" || $("#machtiging-startDatum").val()=="" || $("#machtiging-eindDatum").val()=="") {
+            alert ("Vul alstublieft alle velden in.")
+        }
+        else{
+            var doc = new jsPDF();
+  
+            doc.addImage(imgData, 'JPEG',0,0,210,297);
+            
+            var d = new Date();
+            var month = d.getMonth()+1;
+            var day = d.getDate();
+    
+            var datum = d.getFullYear() + '/' +
+                (month<10 ? '0' : '') + month + '/' +
+                (day<10 ? '0' : '') + day;
+    
+            var machtigingSoort = $('#machtiging-soort').val();
+            var machtigingNaam = $('#machtiging-naam').val();
+            var machtigingStartDatum = $('#machtiging-startDatum').val();
+            var machtigingEindDatum = $('#machtiging-eindDatum').val();
+            
+            doc.addFont('rijksoverheidsansheading-bold');
+            // doc.setFont('rijksoverheidsansheading-bold');
+            // doc.setFontType('bold');
+            doc.setFontSize(18);
+            doc.setTextColor(0, 26, 39);
+            
+            doc.text(105, 250, datum);
+            doc.text(105, 164, machtigingSoort);
+            doc.text(105, 177, machtigingNaam);
+            doc.text(105, 189, machtigingStartDatum);
+            doc.text(105, 202, machtigingEindDatum);
+            doc.save('Machtigingprocess-resultaat.pdf');
         }
 
-        else if(content.getAttribute('data-reset') === button.getAttribute('data-reset')) {
-          content.style.display = "block";
-        }
+    });        
 
-        // if it's not equal then hide it.
-        else {
-          content.style.display = "none";
-        }
-      }
-    });
-  }
-  AOS.init();
-  AOS.refresh();
-  };
+  });
 
