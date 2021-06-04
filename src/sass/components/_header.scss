@@ -1,0 +1,48 @@
+header{
+    height: 100%;
+    padding-bottom: 30px;
+    background: $white;
+    a{
+        width: 244px;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-120px);
+        img{
+
+            height: 100px;
+        }
+    }
+}
+
+nav{
+    height: 80px;
+    background: $lightblue;
+    grid-column: 1/9;
+    li{
+        height: 80px;
+        line-height: 80px;
+        padding: 0px 30px;
+        font-family: $font-primary;
+        font-display: swap;
+        &.active{
+            background: $lighterblue;
+            &:hover{
+                cursor: not-allowed;
+                a{
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &:hover{
+            background: $lighterblue;
+            cursor: pointer;
+        }
+        
+        a{
+            color: $font-color-primary;    
+            text-decoration: none;
+            
+        }
+    }
+}

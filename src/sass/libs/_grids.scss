@@ -1,23 +1,23 @@
 // Container
-.container {
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    padding: ($gutter) ($gutter*2);
+// .container {
+//     position: relative;
+//     margin: auto;
+//     overflow: hidden;
+//     padding: ($gutter) ($gutter*2);
     
-    @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-        padding: ($gutter*1) ($gutter*3);
-    }
+//     @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+//         padding: ($gutter*1) ($gutter*3);
+//     }
 
-    @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {
-        padding: ($gutter*1.5) ($gutter*4);
-    }
+//     @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {
+//         padding: ($gutter*1.5) ($gutter*4);
+//     }
 
-    @media all and (min-width: $breakpoint-xxl){
-        padding: ($gutter*2) ($gutter*6);
-    }
+//     @media all and (min-width: $breakpoint-xxl){
+//         padding: ($gutter*2) ($gutter*6);
+//     }
 
-}
+// }
 
 // Css grid
 .grid {
@@ -29,6 +29,19 @@
 
 }
 
-
+.container{
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-rows: auto;
+    min-height: 1px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 30;
+    align-items: start;
+    padding: 0;
+    margin: 0 auto;
+    position: relative
+}
 
 

@@ -1,28 +1,14 @@
 // Colors
-$bg-color-primary:                #ffffff; 
-$bg-color-secondary:              #E8E8E8;
-$bg-color-tertiary:               #C2C2C2;
-$bg-color-quaternary:             #F8F8F8;
-
-$highlight-color-primary:         #56B884;
-
-$gradient-color-primary:          #F8364E;
-$gradient-color-secondary:        #5697B8;
-$gradient-color-tertiary:         #353C7B;
-
-$gradient-color-primary-translucent:         rgba(#F8364E, .8);
-$gradient-color-secondary-translucent:        rgba(#5697B8, .8);
-$gradient-color-tertiary-translucent:         rgba(#353C7B, .8);
-$highlight-color-primary-translucent:         rgba(#56B884, .8);
-
-
+$white             :              #FFF;
+$font-color-primary:              #001a27;
+$font-color-secondary:            #FFFfff;
+$lightblue         :              #CCE0F1;
+$lighterblue       :              #E5F0F9;
+$rijksoverheid-donkerblauw:         #154273;
 
 // Fonts
-$font-primary:                      'rijksoverheidsansheading-bold', sans-serif; 
-$font-secondary:                    'rijksoverheidsanstext-regular', sans-serif; 
-$font-color-primary:              #001a27;
-$font-color-secondary:            #393939;
-$font-color-tertiary:             #ffffff;
+$font-primary:                      'RijksoverheidHeading', sans-serif;
+$font-secondary:                    'RijksoverheidText', sans-serif;
 
 $font-lineheight:                   1.56rem;
 $font-lineheight-small:             1rem;
