@@ -1,4 +1,4 @@
-import { imgData } from '../js/pdf_img'
+import { imgData } from '../js/pdf_img';
 
 $( document ).ready(function() {
     $('#button').click(function() {
@@ -23,9 +23,7 @@ $( document ).ready(function() {
             var machtigingStartDatum = $('#machtiging-startDatum').val();
             var machtigingEindDatum = $('#machtiging-eindDatum').val();
             
-            doc.addFont('rijksoverheidsansheading-bold');
-            // doc.setFont('rijksoverheidsansheading-bold');
-            // doc.setFontType('bold');
+            // doc.addFont('rijksoverheidsansheading-bold');
             doc.setFontSize(18);
             doc.setTextColor(0, 26, 39);
             

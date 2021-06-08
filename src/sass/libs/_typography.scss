@@ -34,12 +34,14 @@ $font-size-10:                 calc(1em * #{$font-size-ratio} * #{$font-size-rat
     font-family: 'RijksoverheidHeading'; 
     font-weight: 700;
     src: url('../fonts/rijksoverheidsansheading-bold.ttf') format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'RijksOverheidText'; 
     font-weight: 400;
     src: url('../fonts/rijksoverheidsanstext-regular.ttf') format("truetype");
+    font-display: swap;
 }
 
 @mixin h1 {

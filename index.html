@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-    <title>Prototype machtigingenprocess en pdf generatie</title>
-    <script type='text/javascript' src="dist/js/jquery-3.6.0.slim.min.js"></script>
-    <script type='text/javascript' src="dist/js/jspdf.min.js"></script>
-    <script type="text/javascript" src="dist/js/pdf_img.js"></script>
-    <script src="//use.fontawesome.com/0a5f10fda5.js"></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Prototype machtigingenproces en pdf generatie</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="description" content="Het centrale machtigings plattform van Nederland"/>
     <link rel="stylesheet" type="text/css" href="dist/css/main.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
     <header class="banner_top" role="banner">
@@ -17,20 +15,19 @@
             <img class="banner_top_logo" src="dist/img/cmr_logo.svg" alt="Centraal Machtigingen Register logo" />
         </a>
     </header>
-    <nav aria-label="Hoofdmenu">
+    <nav id="hoofdmenu" aria-label="Hoofdmenu">
         <div class="container">
             <ul class="menubar_navigation" role="menubar" aria-label="Centraal Machtigingen Register">
                 <li class="active" role="none">
-                    <a role="menuitem" href="#Machtigingenprocess">
-                        Machtigingenprocess
+                    <a role="menuitem" href="#Machtigingenproces">
+                        Machtigingenproces
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
     <main id="main">
-        <div class="top_img_header" aria-label="Twee personen samen aan het machtigen" title="Twee personen samen aan het machtigen" 
-        style="background-image: url('dist/img/content-header_background-image.jpg')">
+        <div class="top_img_header" aria-label="Twee personen samen aan het machtigen" title="Twee personen samen aan het machtigen">
             <div class="container">
                 <div class="top_img_text">
                     <h1>Simpel en veilig machtigen voor een betere toekomst</h1>
@@ -38,56 +35,92 @@
             </div>
         </div>
         <div class="intro_text">
-            <div class="container"> 
+            <div class="container">  
+                <div class="wrapper">
+                    <article class="wrapper__row">
+                        <img src="dist/img/lees-voor_knop.png" class="knop__lees-voor"></img>
+                    </article>
+                    <article class="wrapper__row">
+                        <img src="dist/img/icon_information.png" class="icon__information"><p class="form__info">Klik op de 'lees voor' knop hierboven om de pagina te laten voorlezen</p> 
+                    </article>
+                </div>                          
                 <article class="intro_text_wrap">
-                    <h2>Het Machtigingprocess</h2>
+                    <h2>Het Machtigingproces</h2>
                     <p>
-                        Welkom op de pagina machtigingsprocess. Tijdens dit process kan u samen een aantal keuzes maken en wordt een machtiging aangemaakt.
-                        Achteraf kunt u deze machtiging als pdf genereren en downloaden waardoor uw altijd inzicht heeft in dit process.
+                        Welkom op de pagina machtigingsproces. Tijdens dit proces vragen wij in het formulier beneden een aantal keuzes te maken betreffende de machtiging.
+                        Nadat u op de knop "Klik om het formulier op te sturen en de pdf te downloaden" hebt geklikt krijgen wij de gegevens en zullen we een pdf maken.
+                        Dit gebeurt binnen enkele seconden. 
+                    </p>
+                </article>
+                <article class="intro_text_wrap">
+                    <p>                        
+                        De pdf hoeft u niet te bewaren als u dat niet wilt, de machtiging is geregistreerd in het systeem.
+                        Maar voor u is het een makkelijke manier om later de belangrijkste gegevens van de machtiging in te zien.
                     </p>
                 </article>
                 <article class="intro_text_wrap">
                     <p>
-                        U bent al ingelogd met DigiD en daar zullen wij uw naam en geboortedatum en de naam en geboortedatum van de machtigingontvanger vandaan halen.
-                        Ook deze komen netjes in de pdf.
+                        <span>U bent al ingelogd met DigiD en daar zullen wij uw naam en geboortedatum en de naam en geboortedatum van de machtigingontvanger vandaan halen.
+                            Ook deze komen netjes in de pdf.
+                        </span>
                     </p>
                 </article>
-                <form action="" class="form">
+                <form action="" class="form" id="form-machtigingenoverzicht">
+                    <h2 class="form__title">Het machtigingenproces formulier</h2>
+                    <p class="form__subtitle">
+                        Hier beneden ziet u het machtigingenproces formulier. Door op de velden met grijze omlijning te klikken opent bij keuze één en keuze twee een lijst met mogelijke machtigingen en bij de derde en vierde keuze een agenda. Hierin kunt u een optie aanklikken.
+                        Als u dit voor alle velden hebt gedaan kunt u op de blauwe knop beneden klikken en is het machtigigenproces juist voltooid.
+                    </p>
                     <div class="form-row">                     
-                        <h3 class="form__title">Geef de soort machtiging aan</h3>
-                        <select name="machtiging-soort" id="machtiging-soort">
-                            <option disabled selected value> Kies een optie </option>
-                            <option value="Financiëen">Financiëen</option>
-                            <option value="Gesteldheid">Gesteldheid</option>
-                            <option value="Volmacht">Volmacht</option>
-                            <option value="Zorg">Zorg</option>
+                        <label for="machtiging-soort"><h3 class="form__title">Kies alstublieft de juiste soort machtiging</h3></label>
+                        <select name="soort machtiging" id="machtiging-soort" aria-haspopup="listbox">
+                            <option disabled selected value aria-selected="true"> Kies een optie </option>
+                            <option id="form__optie__financiën" value="financiën" aria-labelledby="form-machtigingenoverzicht form__optie__financiën">Financiën</option>
+                            <option id="form__optie__gesteldheid" value="Gesteldheid" aria-labelledby="form-machtigingenoverzicht form__optie__gesteldheid">Gesteldheid</option>
+                            <option id="form__optie__volmacht" value="Volmacht" aria-labelledby="form-machtigingenoverzicht form__optie__volmacht">Volmacht</option>
+                            <option id="form__optie__zorg" value="Zorg" aria-labelledby="form-machtigingenoverzicht form__optie__zorg">Zorg</option>
                         </select>
+                        <aside class="form__info-row">
+                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het vlak hierboven om de soort machtiging te kiezen</p> 
+                        </aside>  
                     </div>
                     <div class="form-row"> 
-                        <h3 class="form__title">Kies de geschikte machtiging</h3>
-                        <select name="machtiging-naam" id="machtiging-naam">
-                            <option disabled selected value> Kies een optie </option>
-                            <option value="Belastingen 2019">Belastingen 2019</option>
-                            <option value="Belastingen 2020">Belastingen 2020</option>
-                            <option value="Belastingen 2021">Belastingen 2021</option>
-                            <option value="Belastingen 2022">Belastingen 2022</option>
-                            <option value="Belastingen 2023">Belastingen 2023</option>
-                            <option value="Belastingen 2024">Belastingen 2024</option>
-                            <option value="Belastingen 2025">Belastingen 2025</option>
-                            <option value="Rekeningen">Rekeningen</option>
-                            <option value="Alles">Alle financiëen</option>
+                        <label for="machtiging-naam"> <h3 class="form__title">Kies alstublieft de gewenste machtiging</h3></label>
+                        <select name="naam machtiging" id="machtiging-naam" aria-haspopup="listbox">
+                            <option disabled selected value aria-selected="true"> Kies een optie </option>
+                            <option id="form__optie__alle-financiën" value="Alles" aria-labelledby="form-machtigingenoverzicht form__optie__financiën">Alle financiën</option>
+                            <option id="form__optie__belastingen-2019" value="Belastingen 2019" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2019">Belastingen 2019</option>
+                            <option id="form__optie__belastingen-2020" value="Belastingen 2020" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2020">Belastingen 2020</option>
+                            <option id="form__optie__belastingen-2021" value="Belastingen 2021" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2021">Belastingen 2021</option>
+                            <option id="form__optie__belastingen-2022" value="Belastingen 2022" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2022">Belastingen 2022</option>
+                            <option id="form__optie__belastingen-2023" value="Belastingen 2023" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2023">Belastingen 2023</option>
+                            <option id="form__optie__belastingen-2024" value="Belastingen 2024" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2024" >Belastingen 2024</option>
+                            <option id="form__optie__belastingen-2025" value="Belastingen 2025" aria-labelledby="form-machtigingenoverzicht form__optie__belastingen-2025">Belastingen 2025</option>
+                            <option id="form__optie__rekeningen" value="Rekeningen" aria-labelledby="form-machtigingenoverzicht form__optie__rekeningen">Rekeningen</option>
                         </select>
+                        <aside class="form__info-row">
+                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het vlak hierboven om de gewenste machtiging te kiezen</p> 
+                        </aside>  
                     </div>
                     <div class="form-row"> 
-                        <h3 class="form__title">Geef de startdatum van de machtiging aan</h3>
-                        <input type="date" id="machtiging-startDatum" value="03-06-2021" min="03-06-2021" max="03-06-2025" />
+                        <label for="machtiging-startDatum"><h3 class="form__title">Geef alstublieft de startdatum van de machtiging aan</h3></label>
+                        <input type="date" id="machtiging-startDatum" value="03-06-2021" min="03-06-2021" max="03-06-2025" /> 
+                        <aside class="form__info-row">
+                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het kalender icoon om een startdatum te kiezen</p> 
+                        </aside>                   
                     </div>
                     <div class="form-row"> 
-                        <h3 class="form__title">Geef de einddatum van de machtiging aan</h3>
+                        <label for="machtiging-eindDatum"><h3 class="form__title">Geef alstublieft de einddatum van de machtiging aan</h3></label>
                         <input type="date" id="machtiging-eindDatum" value="03-06-2021" min="03-06-2021" max="03-06-2025" /><br>
+                        <aside class="form__info-row">
+                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het kalender icoon om een einddatum te kiezen</p> 
+                        </aside>       
                     </div>      
                     <div class="form-row"> 
-                        <input type="button" class="form-submit" id="button" value="Klik om op te sturen en pdf te downloaden"/>   
+                        <input type="button" class="form-submit" id="button" value="Klik hierop om keuzes op te sturen en pdf te downloaden"/>   
+                        <aside class="form__info-row">
+                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op de blauw knop hierboven om het proces te voltooien en een pdf te downloaden</p> 
+                        </aside>       
                     </div>               
                 </form>
             </div>
@@ -96,7 +129,10 @@
     <footer>
 
     </footer>
-    <script type="text/javascript" src="dist/js/pdf_img.js"></script>
+
+    <script type='text/javascript' src="dist/js/jquery-3.6.0.slim.min.js"></script>
+    <script type='text/javascript' src="dist/js/jspdf.min.js"></script>
+    <script type="module" src="dist/js/pdf_img.js"></script>
     <script type='text/javascript' src="dist/js/main.js"></script>
 </body>
 </html>
