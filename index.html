@@ -11,9 +11,9 @@
 </head>
 <body>
     <header class="banner_top" role="banner">
-        <a href="index.html">
+        <!-- <a href="index.html">
             <img class="banner_top_logo" src="dist/img/cmr_logo.svg" alt="Centraal Machtigingen Register logo" />
-        </a>
+        </a> -->
     </header>
     <nav id="hoofdmenu" aria-label="Hoofdmenu">
         <div class="container">
@@ -41,7 +41,7 @@
                         <img src="dist/img/lees-voor_knop.png" class="knop__lees-voor"></img>
                     </article>
                     <article class="wrapper__row">
-                        <img src="dist/img/icon_information.png" class="icon__information"><p class="form__info">Klik op de 'lees voor' knop hierboven om de pagina te laten voorlezen</p> 
+                        <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16" alt="Informatie icoon" class="icon__information"><p class="form__info">Klik op de 'lees voor' knop hierboven om de pagina te laten voorlezen</p> 
                     </article>
                 </div>                          
                 <article class="intro_text_wrap">
@@ -75,13 +75,13 @@
                         <label for="machtiging-soort"><h3 class="form__title">Kies alstublieft de juiste soort machtiging</h3></label>
                         <select name="soort machtiging" id="machtiging-soort" aria-haspopup="listbox">
                             <option disabled selected value aria-selected="true"> Kies een optie </option>
-                            <option id="form__optie__financiën" value="financiën" aria-labelledby="form-machtigingenoverzicht form__optie__financiën">Financiën</option>
-                            <option id="form__optie__gesteldheid" value="Gesteldheid" aria-labelledby="form-machtigingenoverzicht form__optie__gesteldheid">Gesteldheid</option>
+                            <option id="form__optie__algemenezaken" value="Algemene zaken" aria-labelledby="form-machtigingenoverzicht form__optie__gesteldheid">Algemene zaken</option>
+                            <option id="form__optie__financiën" value="Financiën" aria-labelledby="form-machtigingenoverzicht form__optie__financiën">Financiën</option>
                             <option id="form__optie__volmacht" value="Volmacht" aria-labelledby="form-machtigingenoverzicht form__optie__volmacht">Volmacht</option>
                             <option id="form__optie__zorg" value="Zorg" aria-labelledby="form-machtigingenoverzicht form__optie__zorg">Zorg</option>
                         </select>
                         <aside class="form__info-row">
-                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het vlak hierboven om de soort machtiging te kiezen</p> 
+                            <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16"><p class="form__info">Klik op het vlak hierboven om de soort machtiging te kiezen</p> 
                         </aside>  
                     </div>
                     <div class="form-row"> 
@@ -99,27 +99,27 @@
                             <option id="form__optie__rekeningen" value="Rekeningen" aria-labelledby="form-machtigingenoverzicht form__optie__rekeningen">Rekeningen</option>
                         </select>
                         <aside class="form__info-row">
-                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het vlak hierboven om de gewenste machtiging te kiezen</p> 
+                            <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16"><p class="form__info">Klik op het vlak hierboven om de gewenste machtiging te kiezen</p> 
                         </aside>  
                     </div>
                     <div class="form-row"> 
                         <label for="machtiging-startDatum"><h3 class="form__title">Geef alstublieft de startdatum van de machtiging aan</h3></label>
-                        <input type="date" id="machtiging-startDatum" value="03-06-2021" min="03-06-2021" max="03-06-2025" /> 
+                        <input type="date" id="machtiging-startDatum" min="03-06-2021" max="08-06-2025" /> 
                         <aside class="form__info-row">
-                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het kalender icoon om een startdatum te kiezen</p> 
+                            <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16"><p class="form__info">Klik op het kalender icoon om een startdatum te kiezen</p> 
                         </aside>                   
                     </div>
                     <div class="form-row"> 
                         <label for="machtiging-eindDatum"><h3 class="form__title">Geef alstublieft de einddatum van de machtiging aan</h3></label>
-                        <input type="date" id="machtiging-eindDatum" value="03-06-2021" min="03-06-2021" max="03-06-2025" /><br>
+                        <input type="date" id="machtiging-eindDatum" min="08-06-2021" max="08-06-2025" /><br>
                         <aside class="form__info-row">
-                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op het kalender icoon om een einddatum te kiezen</p> 
+                            <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16"><p class="form__info">Klik op het kalender icoon om een einddatum te kiezen</p> 
                         </aside>       
                     </div>      
                     <div class="form-row"> 
                         <input type="button" class="form-submit" id="button" value="Klik hierop om keuzes op te sturen en pdf te downloaden"/>   
                         <aside class="form__info-row">
-                            <img src="dist/img/icon_information.png"><p class="form__info">Klik op de blauw knop hierboven om het proces te voltooien en een pdf te downloaden</p> 
+                            <img src="dist/img/icon_information.png" alt="Informatie icoon" width="16"height="16"><p class="form__info">Klik op de blauw knop hierboven om het proces te voltooien en een pdf te downloaden</p> 
                         </aside>       
                     </div>               
                 </form>
@@ -129,10 +129,13 @@
     <footer>
 
     </footer>
-
-    <script type='text/javascript' src="dist/js/jquery-3.6.0.slim.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+        crossorigin="anonymous">
+    </script>
     <script type='text/javascript' src="dist/js/jspdf.min.js"></script>
-    <script type="module" src="dist/js/pdf_img.js"></script>
+    <script type='module' src="dist/js/pdf_img.js"></script>
     <script type='text/javascript' src="dist/js/main.js"></script>
 </body>
 </html>
